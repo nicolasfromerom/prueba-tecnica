@@ -18,4 +18,9 @@ class Cliente extends Model
         'rubro',
         'observacion',
     ];
+
+    public function campaigns()
+    {
+        return $this->hasMany(Campaign::class, 'cliente_id');
+    }
 }

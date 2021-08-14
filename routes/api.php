@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\ClienteController;
+use App\Http\Controllers\Api\TablaInfoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +21,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::apiResource('clientes', ClienteController::class);
+
+Route::get('tabla-info', [TablaInfoController::class, 'index']);
